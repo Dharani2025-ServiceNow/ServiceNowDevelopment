@@ -1,3 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element db_object_id="e86292bf8302221087e8ba96feaad30b" extends="task" label="Loaner Request" max_length="40" name="x_1461925_loaner_r_loaner_request" type="collection"/>
+    <element db_object_id="e86292bf8302221087e8ba96feaad30b" extends="task" label="Loaner Request" max_length="40" name="x_1461925_loaner_r_loaner_request" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Other" max_length="40" name="u_string_1" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Item type" max_length="40" name="u_choice_4" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Desktop" sequence="1" value="desktop"/>
+                <element inactive_on_update="false" label="Mobile Phone" sequence="0" value="mobile phone"/>
+                <element inactive_on_update="false" label="Choice 3" sequence="2" value="Choice 3"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Start date" mandatory="true" max_length="40" name="u_glide_date_2" type="glide_date"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" default="santa carla" label="Depot" max_length="40" name="u_choice_6" type="string">
+            <choice>
+                <element inactive_on_update="false" label="New Yark" sequence="0" value="new yark"/>
+                <element inactive="true" inactive_on_update="true" label="Choice 1" sequence="0" value="Choice 1"/>
+                <element inactive_on_update="false" label="Santa Carla" sequence="2" value="santa carla"/>
+                <element inactive_on_update="false" label="Singapore" sequence="4" value="singapore"/>
+                <element inactive_on_update="false" label="Sedney" sequence="1" value="sedney"/>
+                <element inactive_on_update="false" label="Landon" sequence="3" value="landon"/>
+                <element inactive_on_update="false" label="Other" sequence="5" value="other"/>
+                <element inactive="true" inactive_on_update="true" label="Choice 3" sequence="2" value="Choice 3"/>
+                <element inactive="true" inactive_on_update="true" label="Choice 2" sequence="1" value="Choice 2"/>
+            </choice>
+        </element>
+        <element attributes="encode_utf8=false" label="Requested for" mandatory="true" max_length="32" name="u_reference_1" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="End date" mandatory="true" max_length="40" name="u_glide_date_3" type="glide_date"/>
+        <element attributes="edge_encryption_enabled=true" label="Location to be used" max_length="40" name="u_string_10" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="End date" max_length="40" name="u_glide_date_time_9" type="glide_date_time"/>
+        <element label="Location to be used" max_length="40" name="u_translated_text_7" type="translated_text"/>
+        <element attributes="edge_encryption_enabled=true" label="Start date" max_length="40" name="u_glide_date_time_8" type="glide_date_time"/>
+    </element>
 </database>
